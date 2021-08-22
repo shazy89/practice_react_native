@@ -15,5 +15,12 @@ export const homeStyles = StyleSheet.create({
   fontSize3: {
     fontSize: 20,
     fontWeight: '600',
+    color: 'white',
+    backgroundColor: 'purple',
+  },
+  marginBottom: {
+    marginBottom: 2,
+    borderBottomColor: 'black',
+    borderBottomWidth: 2,
   },
 });
