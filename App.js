@@ -27,7 +27,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={styleHeader}>
+        <Stack.Navigator screenOptions={(styleHeader, {headerShown: false})}>
           <Stack.Screen
             name="Home"
             component={HoScreen}
