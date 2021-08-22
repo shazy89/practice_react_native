@@ -2,6 +2,7 @@ import * as React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import HoScreen from './src/screens/HomeScren';
 import DetailsScreen from './src/screens/DetailsScreen';
 function HomeScreen() {
@@ -24,16 +25,18 @@ const styleHeader = {
 };
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={styleHeader}>
-        <Stack.Screen
-          name="Home"
-          component={HoScreen}
-          options={{title: 'My home'}}
-        />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={styleHeader}>
+          <Stack.Screen
+            name="Home"
+            component={HoScreen}
+            options={{title: 'My home'}}
+          />
+          <Stack.Screen name="Details" component={DetailsScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 

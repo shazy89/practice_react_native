@@ -1,15 +1,15 @@
 import React from 'react';
-import {
-  Button,
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  SafeAreaView,
-} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {Button, View, Text, Pressable, StyleSheet} from 'react-native';
 const HomeScren = ({navigation}) => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 3,
+      }}>
       <Text>Home Screen</Text>
       <Text>
         {' '}
@@ -25,7 +25,7 @@ const HomeScren = ({navigation}) => {
         title="Go To Details"
         onPress={() => navigation.navigate('Details')}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
